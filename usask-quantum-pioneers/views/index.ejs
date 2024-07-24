@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USask Quantum Pioneers</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        @keyframes breath {
+            0% { background-size: 100% auto; }
+            50% { background-size: 110% auto; }
+            100% { background-size: 100% auto; }
+        }
+
+        @keyframes slideInLeft {
+            0% { transform: translateX(-100%); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes slideInRight {
+            0% { transform: translateX(100%); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
+
+        .hero {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #bkg {
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            animation: breath 15s ease-in-out infinite;
+            background: url("/images/QuantumField.webp") center center no-repeat;
+            background-size: 100% auto;
+            z-index: -1; /* Ensure the background is behind the text */
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 20%;
+            left: 2%;
+            transform: translateY(-30%);
+            width: 60%;
+        }
+
+        .hero-text h1 {
+            font-size: 8.5em;
+            color: rgba(230, 255, 255, 1);
+            margin: 0;
+        }
+
+        .buttons-box {
+            position: absolute;
+            top: 120px;
+            right: 120px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 25px;
+            text-align: right;
+        }
+
+        .buttons-box a {
+            display: block;
+            color: rgba(230, 255, 255, 1);
+            font-size: 1.5em;
+            text-decoration: none;
+            margin: 10px 0;
+        }
+
+        .buttons-box a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 20px 20px; /* Reduced padding */
+            background-color: #111;
+            min-height: 1vh; /* Reduced height to minimize spacing */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box {
+            background-color: rgba(130, 180, 255, 0.5); /* Dark green fading box */
+            padding: 20px;
+            border-radius: 15px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            width: 66.66%; /* Two-thirds of the width */
+        }
+
+        .mission-box {
+            align-self: flex-start;
+        }
+
+        .vision-box {
+            align-self: flex-end;
+        }
+
+        .values-box {
+            align-self: flex-start;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        p, ul {
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
+
+        .hidden {
+            visibility: hidden;
+        }
+
+        .contact-section {
+            background-color: #333; /* Gray background */
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact-form {
+            width: 50%;
+        }
+
+        .contact-form label {
+            display: block;
+            font-size: 1.2em;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .contact-form textarea {
+            height: 150px;
+        }
+
+        .contact-form button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #2255aa;
+            color: #fff;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #003366;
+        }
+
+        .contact-right {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact-right a {
+            color: #fff;
+            font-size: 3em;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div id="bkg"></div>
+        <div class="hero-text">
+            <h1>USask Quantum Pioneers</h1>
+        </div>
+        <div class="buttons-box">
+            <a href="#who-are-we" class="who-are-we">About</a>
+            <a href="#our_team" class="our_team">Our team</a>
+            <a href="#contact-us" class="contact-us">Contact us</a>
+        </div>
+    </div>
+
+    <section id="who-are-we">
+    </section>
+    <section id="our_mission">
+        <div class="box mission-box hidden">
+            <h2>Our Mission</h2>
+            <p style="color: rgb(225, 125, 0);">We aim to advance the quantum computing industry by fostering interdisciplinary collaboration among students to help solve complex problems and innovate in the field. <span style="color:rgb(255, 255, 255)"> We are dedicated to the continuous learning and professional development of our members, helping people of interest break through into the industry (where action takes place) and have the necessary set of skills to be useful.</span></p>
+        </div>
+    </section>
+    <section id="our_vision">
+        <div class="box vision-box hidden">
+            <h2>Our Vision</h2>
+            <p style="color: rgb(225, 125, 0);">We see a world where people have access to quantum machines that can help solve complex problems which can't be solved using current technologies. <span style="color:rgb(255, 255, 255)"> We believe that quantum computing should not be limited to a select few but should be available to anyone with the curiosity and determination to harness its power. Our goal is to democratize access to quantum technologies, ensuring that students, researchers, and innovators from all backgrounds can leverage these tools to drive progress. We are committed to nurturing the next generation of quantum leaders. By providing education, resources, and opportunities, we aim to inspire and equip young minds to become pioneers in the quantum computing revolution.</span></p>
+        </div>
+    </section>
+    <section id="our_values">
+        <div class="box values-box hidden">
+            <h2>Our Values</h2>
+            <p style="color: rgb(225, 125, 0);">We believe in respect, diversity, being action-oriented, adaptability, and giving the best.</p>
+            <ul>
+                <li>Respect and diversity: We hold each other to high standards</li>
+                <li>Stay action-Oriented: Take action, measure with respect to a direction, make corrections, and iterate to foster opportunities</li>
+                <li>Adaptability: Believe in fluid intelligence and flexibility to learn new things and question previous knowledge</li>
+                <li>Giving the best: Pursue outcomes through intelligent execution, resilience, and taking risks.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact-us" class="contact-section">
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+        <div class="contact-right">
+            <a href="https://www.linkedin.com/in/hakeemhannoon/" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
+                    <path d="M22.23 0H1.77A1.77 1.77 0 0 0 0 1.77v20.46A1.77 1.77 0 0 0 1.77 24h20.46A1.77 1.77 0 0 0 24 22.23V1.77A1.77 1.77 0 0 0 22.23 0zm-13 20.43H5.34V9.06h3.89v11.37zM7.16 7.54a2.25 2.25 0 1 1 0-4.5 2.25 2.25 0 0 1 0 4.5zM20.43 20.43h-3.88V14.7c0-1.37-.03-3.14-1.92-3.14-1.92 0-2.22 1.5-2.22 3.04v5.83h-3.88V9.06h3.73v1.55h.05a4.08 4.08 0 0 1 3.67-2.02c3.92 0 4.64 2.58 4.64 5.93v6.91z" fill="#0077B5"/>
+                </svg>
+            </a>
+            <a href="https://x.com/HFIZX_14" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
+                    <path d="M24 4.557a9.93 9.93 0 0 1-2.828.775A4.935 4.935 0 0 0 23.337 2.6a9.865 9.865 0 0 1-3.127 1.195A4.92 4.92 0 0 0 11.845 6.03a13.978 13.978 0 0 1-10.156-5.14A4.935 4.935 0 0 0 3.18 9.722a4.9 4.9 0 0 1-2.228-.616c-.054 1.98 1.376 3.827 3.412 4.246a4.904 4.904 0 0 1-2.224.085 4.92 4.92 0 0 0 4.604 3.417A9.865 9.865 0 0 1 .586 19.14a13.94 13.94 0 0 0 7.548 2.213c9.058 0 14.01-7.514 13.999-14.261 0-.219-.005-.436-.015-.653A10.004 10.004 0 0 0 24 4.557z" fill="#1DA1F2"/>
+                </svg>
+            </a>
+            <a href="https://www.instagram.com/hakeem_hannoon/" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
+                    <path d="M12 2.163c3.2 0 3.584.012 4.85.07 1.366.062 2.633.3 3.608 1.275.976.975 1.214 2.243 1.276 3.608.057 1.267.07 1.651.07 4.85s-.013 3.583-.07 4.85c-.062 1.366-.3 2.634-1.275 3.609-.975.975-2.243 1.213-3.608 1.275-1.267.057-1.651.07-4.85.07s-3.583-.013-4.85-.07c-1.366-.062-2.633-.3-3.608-1.275-.975-.975-1.213-2.243-1.275-3.608C2.175 15.583 2.162 15.2 2.162 12s.013-3.583.07-4.85c.062-1.366.3-2.633 1.275-3.608.975-.976 2.243-1.214 3.608-1.276C8.417 2.175 8.8 2.162 12 2.162M12 0C8.736 0 8.332.013 7.052.072 5.772.13 4.513.3 3.477 1.336 2.442 2.372 2.272 3.63 2.213 4.91.013 8.332 0 8.736 0 12s.013 3.583.072 4.851c.06 1.267.229 2.526 1.264 3.561.976.975 2.243 1.213 3.608 1.275 1.27.057 1.675.07 4.851.07s3.583-.013 4.851-.07c1.267-.062 2.634-.3 3.609-1.275.976-.976 1.213-2.243 1.275-3.609.057-1.267.07-1.675.07-4.851s-.013-3.583-.07-4.851c-.062-1.267-.3-2.634-1.275-3.609-.976-.976-2.243-1.213-3.609-1.275-1.267-.057-1.651-.07-4.851-.07zm0 5.838c-3.404 0-6.162 2.758-6.162 6.162 0 3.404 2.758 6.162 6.162 6.162 3.404 0 6.162-2.758 6.162-6.162 0-3.404-2.758-6.162-6.162-6.162zm0 10.1c-2.17 0-3.938-1.767-3.938-3.938 0-2.17 1.768-3.938 3.938-3.938 2.17 0 3.938 1.768 3.938 3.938 0 2.17-1.768 3.938-3.938 3.938zm6.406-11.406c-.796 0-1.44.644-1.44 1.44s.644 1.44 1.44 1.44 1.44-.644 1.44-1.44-.644-1.44-1.44-1.44z" fill="#E1306C"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("YOUR_USER_ID");
+        })();
+
+        document.querySelectorAll('.who-are-we, .contact-us').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        function onScroll() {
+            const missionBox = document.querySelector('.mission-box');
+            const visionBox = document.querySelector('.vision-box');
+            const valuesBox = document.querySelector('.values-box');
+            const windowHeight = window.innerHeight;
+
+            if (missionBox.getBoundingClientRect().top < windowHeight - 100) {
+                missionBox.classList.remove('hidden');
+                missionBox.style.animation = 'slideInLeft 1s forwards';
+                missionBox.style.opacity = '1';
+            }
+            if (visionBox.getBoundingClientRect().top < windowHeight - 100) {
+                visionBox.classList.remove('hidden');
+                visionBox.style.animation = 'slideInRight 1s forwards';
+                visionBox.style.opacity = '1';
+            }
+            if (valuesBox.getBoundingClientRect().top < windowHeight - 100) {
+                valuesBox.classList.remove('hidden');
+                valuesBox.style.animation = 'slideInLeft 1s forwards';
+                valuesBox.style.opacity = '1';
+            }
+        }
+
+        window.addEventListener('scroll', onScroll);
+
+        // Trigger scroll event to handle cases where sections are already in view on load
+        window.dispatchEvent(new Event('scroll'));
+
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+                .then(function() {
+                    alert('Your message has been sent successfully!');
+                }, function(error) {
+                    alert('There was an error sending your message. Please try again.');
+                });
+        });
+    </script>
+</body>
+</html>

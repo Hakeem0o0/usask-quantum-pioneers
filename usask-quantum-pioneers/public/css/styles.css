@@ -1,0 +1,60 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('/images/QuantumField.webp') no-repeat center center;
+    background-size: cover; /* Ensure the background covers the entire area */
+    background-repeat: no-repeat;
+}
+
+.hero-text {
+    position: absolute;
+    top: 15%; /* Adjust the top value to control vertical position */
+    left: 7%; /* Adjust the left value to control horizontal position */
+    transform: translateY(-40%); /* Adjust the translateY value to match the top value */
+    width: 66%; /* Make the width two-thirds of the screen */
+}
+
+.hero-text h1 {
+    font-size: 4em; /* Adjust the font size as needed */
+    color: #ffffff; /* Set the color to white, you can use any color code you prefer */
+    margin: 0;
+}
+
+.links a {
+    display: block;
+    color: #0f0;
+    font-size: 1.2em;
+    margin: 10px 0;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 50px 20px;
+    background-color: #111;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+html {
+    scroll-behavior: smooth;
+}
